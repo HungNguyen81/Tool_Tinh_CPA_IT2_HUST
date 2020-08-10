@@ -8,3 +8,14 @@ C:\Users\nguye\source\repos\Project_2\obj\Debug\Project_2.csproj.GenerateResourc
 C:\Users\nguye\source\repos\Project_2\obj\Debug\Project_2.csproj.CoreCompileInputs.cache
 C:\Users\nguye\source\repos\Project_2\obj\Debug\Project_2.exe
 C:\Users\nguye\source\repos\Project_2\obj\Debug\Project_2.pdb
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\bin\Debug\Project_2.exe.config
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\bin\Debug\Project_2.exe
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\bin\Debug\Project_2.pdb
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.Form1.resources
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.Properties.Resources.resources
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.csproj.GenerateResource.cache
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.csproj.CoreCompileInputs.cache
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.exe
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.pdb
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\bin\Debug\CTDT_sv_IT2_HUST.mdf
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\bin\Debug\CTDT_sv_IT2_HUST_log.ldf

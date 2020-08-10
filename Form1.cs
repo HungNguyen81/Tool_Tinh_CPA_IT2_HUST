@@ -19,25 +19,36 @@ namespace Project_2
         static double Diem_So = 0;
         DataTable cb_data;
 
+        // ________________________ if connect to Service based Database ____________________________
+        //static String connect_String = @"Data Source=.\SQLEXPRESS;AttachDbFilename="
+        //            + Application.StartupPath
+        //            + @"\CTDT_sv_IT2_HUST.mdf;Integrated Security=True;User Instance=True";
+        static String connect_String = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" 
+                        + Application.StartupPath 
+                        + @"\CTDT_sv_IT2_HUST.mdf;Integrated Security=True;Connect Timeout=30";
 
-        SqlConnection cnn =
-            new SqlConnection(@"Data Source=DESKTOP-I3P8PTT;"
-                    + "Initial Catalog=chuong_trinh_dt_it2_nnh;Integrated Security=True");
+        SqlConnection cnn = new SqlConnection(connect_String);
+
+        // ________________________ if connect to local Database ____________________________________
+        //SqlConnection cnn =
+        //    new SqlConnection(@"Data Source=DESKTOP-I3P8PTT;" // server name
+        //            + "Initial Catalog=chuong_trinh_dt_it2_nnh;Integrated Security=True");
 
         String sql1 = "select s.MAHP, s.TENHP, s.SOTC, hp.TRONGSO_GK from SP s, TRONG_SO_HP hp"
-                    + " where s.MAHP = hp.MAHP";
+                    + " where s.MAHP = hp.MAHP";  // Lấy ra danh sách học phần
 
         String sql2 = "select s.*, h.DIEMCHU, hp.TRONGSO_GK as TRONGSO"
                     + " from SP s, TRONG_SO_HP hp, HP_daHoc h" 
                     + " where hp.MAHP = s.MAHP and h.TENHP = s.TENHP"
-                    + " and h.DIEMCHU is not null";
+                    + " and h.DIEMCHU is not null"; // Lấy ra các học phần đã học
 
-        String sql3 = "select TENHP, MAHP from SP";
+        String sql3 = "select TENHP, MAHP from SP"; // Lấy ra danh sách HP để đổ vào Combobox
 
 
         public Form1()
         {
             InitializeComponent();
+          
             ConectDatabase(sql1, true);
             ConectDatabase(sql2, false);
 
@@ -246,6 +257,11 @@ namespace Project_2
         
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            DeleteData();
+        }
+
+        public void DeleteData()
+        {
             if (!txt_maHP.Text.Equals(""))
             {
                 foreach (DataRow r in cb_data.Rows)
@@ -264,6 +280,26 @@ namespace Project_2
             SqlCommand cmd = cnn.CreateCommand();
             cmd.CommandText = sql;
             sqlParam.Value = Ten_HP;
+
+            cmd.Parameters.Add(sqlParam);
+            cmd.ExecuteNonQuery();
+
+            cnn.Close();
+            txt_maHP.Text = "";
+            txt_diemQt.Text = "";
+            txt_diemCK.Text = "";
+            txt_diemChu.Text = "";
+            ConectDatabase(sql2, false);
+        }
+
+        public void DeleteData(String TenHP)
+        {
+            cnn.Open();
+            String sql = "delete from HP_daHoc where TENHP = @tenhp";
+            SqlParameter sqlParam = new SqlParameter("@tenhp", SqlDbType.VarChar);
+            SqlCommand cmd = cnn.CreateCommand();
+            cmd.CommandText = sql;
+            sqlParam.Value = TenHP;
 
             cmd.Parameters.Add(sqlParam);
             cmd.ExecuteNonQuery();
@@ -338,10 +374,35 @@ namespace Project_2
                         break;
                 }
             }
-            MessageBox.Show(tongDiem.ToString() + ":" + Sum.ToString());
+            MessageBox.Show(tongDiem.ToString() + "/" + Sum.ToString());
             double CPA = Math.Round(tongDiem/Sum, 2);
             lb_result.Text = CPA.ToString();
 
-        } 
+        }
+
+        private void dgv_monhoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int colIndex = e.ColumnIndex;
+            if(colIndex == 1)
+            {
+                try
+                {
+                    DataGridViewRow row = dgv_monhoc.Rows[rowIndex];
+                    String tenhp = row.Cells[1].Value.ToString();
+                    DialogResult choice = MessageBox.Show("Bạn có muốn xóa :" + tenhp + " không?", "THÔNG BÁO",
+                                            MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (choice == DialogResult.Yes)
+                    {
+                        DeleteData(tenhp);
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+        }
     }
 }
