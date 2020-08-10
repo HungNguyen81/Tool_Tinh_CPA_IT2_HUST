@@ -19,3 +19,8 @@ C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.exe
 C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.pdb
 C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\bin\Debug\CTDT_sv_IT2_HUST.mdf
 C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\bin\Debug\CTDT_sv_IT2_HUST_log.ldf
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.csprojAssemblyReference.cache
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\bin\Debug\Project_2.exe.manifest
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\bin\Debug\Project_2.application
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.exe.manifest
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.application
