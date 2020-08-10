@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Project_2.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Project_2.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Project_2" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Project_2.exe" size="541176">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Project_2.exe" size="803320">
       <assemblyIdentity name="Project_2" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZWxQVsrqMRNCD8v5NrFh7jsCcmsvy0mxWZYrnC/fPIg=</dsig:DigestValue>
+        <dsig:DigestValue>kTXMLZJNdeRealRWnmbjZ7WhD2+oRt/v6YKkbWx84LY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -59,7 +59,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>1JoZtTBZKVpflnwJg+OOcwWWapg7MCzg4PdTtgZVtdI=</dsig:DigestValue>
+      <dsig:DigestValue>+Q24fC2HEMOaEyt7vVlE9yKjXYRUXGxtZ+ZtUWo/IlE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="CTDT_sv_IT2_HUST_log.ldf" size="8388608" writeableType="applicationData">
@@ -68,7 +68,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>DBLS901dorRBhR5SQp4kJtJ5T3btdbxfoid1viW4lmo=</dsig:DigestValue>
+      <dsig:DigestValue>2wzpOM/Fkip9Jsa/gjciD96VRGi6u6PuhLqSwtsOjys=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Project_2.exe.config" size="189">

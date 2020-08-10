@@ -24,3 +24,4 @@ C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\bin\Debug\Project_2.exe.manif
 C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\bin\Debug\Project_2.application
 C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.exe.manifest
 C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.application
+C:\Users\nguye\source\repos\Tool_Tinh_CPA_IT2_HUST\obj\Debug\Project_2.Form2.resources

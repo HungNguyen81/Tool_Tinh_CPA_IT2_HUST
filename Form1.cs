@@ -13,6 +13,8 @@ namespace Project_2
 {
     public partial class Form1 : Form
     {
+
+        public static bool isCPA = true;
         static string Ten_HP = "";
         static string Diem_Chu = "";
         static string Trong_So = "";
@@ -26,13 +28,15 @@ namespace Project_2
         static String connect_String = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" 
                         + Application.StartupPath 
                         + @"\CTDT_sv_IT2_HUST.mdf;Integrated Security=True;Connect Timeout=30";
+        static String connect_String2 = @"Data Source=DESKTOP-I3P8PTT;" // server name
+                        + "Initial Catalog=chuong_trinh_dt_it2_nnh;Integrated Security=True";
 
-        SqlConnection cnn = new SqlConnection(connect_String);
+        SqlConnection cnn = (isCPA)? new SqlConnection(connect_String)
+                                   : new SqlConnection(connect_String2);
 
         // ________________________ if connect to local Database ____________________________________
         //SqlConnection cnn =
-        //    new SqlConnection(@"Data Source=DESKTOP-I3P8PTT;" // server name
-        //            + "Initial Catalog=chuong_trinh_dt_it2_nnh;Integrated Security=True");
+        //    new SqlConnection(connect_String2);
 
         String sql1 = "select s.MAHP, s.TENHP, s.SOTC, hp.TRONGSO_GK from SP s, TRONG_SO_HP hp"
                     + " where s.MAHP = hp.MAHP";  // Lấy ra danh sách học phần
@@ -48,11 +52,19 @@ namespace Project_2
         public Form1()
         {
             InitializeComponent();
-          
+            setConn();
             ConectDatabase(sql1, true);
             ConectDatabase(sql2, false);
-
+            
             UpdateCombobox_HP(sql3);
+        }
+
+        public void setConn()
+        {
+            
+            cnn = (isCPA) ? new SqlConnection(connect_String)
+                                   : new SqlConnection(connect_String2);
+            label4.Text = (isCPA)? "GPA của bạn:" : "CPA của bạn:";
         }
 
         private void UpdateCombobox_HP(String sql)
@@ -400,9 +412,20 @@ namespace Project_2
                 }
                 catch (Exception ex)
                 {
-
+                    
                 }
             }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Application.Exit();
+            Application.ExitThread();
+            
+        }
+        public static void sendForm(Form2 f)
+        {
+
         }
     }
 }
