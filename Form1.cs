@@ -419,13 +419,20 @@ namespace Project_2
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Application.Exit();
-            Application.ExitThread();
+            Application.Exit();
+            //Application.ExitThread();
             
         }
         public static void sendForm(Form2 f)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
         }
     }
 }
