@@ -32,8 +32,6 @@ namespace Project_2
             Form1 f1 = new Form1();
             f1.Show();
             this.Hide();
-
-
         }
 
         
@@ -49,7 +47,6 @@ namespace Project_2
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
-
             Application.Exit();
         }
     }
