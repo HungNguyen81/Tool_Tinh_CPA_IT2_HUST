@@ -156,7 +156,7 @@ namespace Project_2
             
             if (!txt_diemChu.Text.Equals(""))
             {
-                Diem_Chu = txt_diemChu.Text;
+                Diem_Chu = txt_diemChu.Text.ToUpper();
             }
             else
             {
